@@ -1,7 +1,9 @@
 {
-  "functions": {
-    "api/github/webhooks/index.js": {
-      "maxDuration": 30
-    }
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api/github/webhooks/index.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/github/webhooks", "dest": "api/github/webhooks/index.js" }
+  ]
 }
