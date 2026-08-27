@@ -1,13 +1,23 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/github/webhooks",
-      "destination": "/api/github/webhooks/index.js"
+      "src": "api/github/webhooks/index.js",
+      "use": "@vercel/node"
     },
     {
-      "source": "/(.*)",
-      "destination": "/index.js"
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/github/webhooks",
+      "dest": "api/github/webhooks/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
     }
   ]
 }
