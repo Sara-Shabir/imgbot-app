@@ -1,16 +1,7 @@
 {
   "name": "imgbot-app",
   "version": "1.0.0",
-  "description": "GitHub Image Optimizer Bot",
-  "main": "index.js",
-  "scripts": {
-    "start": "probot run ./index.js"
-  },
   "dependencies": {
-    "probot": "^12.0.0",
-    "@probot/serverless-httponly": "^1.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
+    "probot": "^12.2.5"
   }
 }
